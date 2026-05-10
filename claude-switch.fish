@@ -615,6 +615,8 @@ switch $argv[1]
         echo "claude-switch v$VERSION"
     case ""
         cmd_interactive
+	case "default"
+		cmd_launch default
     case '*'
         if profile_exists $argv[1]
             cmd_launch $argv[1]
