@@ -508,7 +508,7 @@ function cmd_launch
     end
 
     if test "$name" = default
-        exec claude
+        claude
     end
 
     if not profile_exists $name
@@ -518,7 +518,7 @@ function cmd_launch
     end
 
     set -l dir (profile_dir $name)
-    exec env CLAUDE_CONFIG_DIR="$dir" claude
+    CLAUDE_CONFIG_DIR="$dir" claude
 end
 
 function cmd_interactive
