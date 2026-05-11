@@ -56,7 +56,7 @@ function _cs_cmd_delete
     echo ""
 
     _cs_print_info "Logging out of profile '$name'..."
-    env CLAUDE_CONFIG_DIR="$dir" claude auth logout 2>/dev/null
+    CLAUDE_CONFIG_DIR="$dir" claude auth logout 2>/dev/null
     or true
 
     rm -rf $dir

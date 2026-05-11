@@ -85,7 +85,7 @@ function _cs_cmd_rename
         end
 
         set -l new_func "$_cs_fish_functions_dir/claude-$new_sname.fish"
-        printf 'function claude-%s\n    env CLAUDE_CONFIG_DIR="%s" claude $argv\nend\n' $new_sname $new_dir > $new_func
+        printf 'function claude-%s\n    CLAUDE_CONFIG_DIR="%s" claude $argv\nend\n' $new_sname $new_dir > $new_func
         _cs_print_success "Replaced function claude-$old_sname → claude-$new_sname"
     end
 

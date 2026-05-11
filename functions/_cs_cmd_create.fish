@@ -59,7 +59,7 @@ function _cs_cmd_create
     if test -f $func_file
         _cs_print_info "Function 'claude-$sname' already exists in $_cs_fish_functions_dir"
     else
-        printf 'function claude-%s\n    env CLAUDE_CONFIG_DIR="%s" claude $argv\nend\n' $sname $dir > $func_file
+        printf 'function claude-%s\n    CLAUDE_CONFIG_DIR="%s" claude $argv\nend\n' $sname $dir > $func_file
         printf "  %s✔%s  Added function %sclaude-%s%s to %s\n" \
             (set_color green) (set_color normal) (set_color --bold) $sname (set_color normal) $_cs_fish_functions_dir
     end
