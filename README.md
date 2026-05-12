@@ -1,6 +1,6 @@
 <div align="center">
 
-_This is a fork of [SaschaHeyer/claude-switch](https://github.com/SaschaHeyer/claude-switch) for the fish shell._
+_This is a rewrite of [SaschaHeyer/claude-switch](https://github.com/SaschaHeyer/claude-switch) for the fish shell._
 
 # Claude Switch
 
